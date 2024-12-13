@@ -1,0 +1,68 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/todo.css">
+    <title></title>
+</head>
+ <!-- 
+学習順序
+Junit
+Mybatis
+Jenkins
+JPA
+AOP
+
+ -->
+<!-- 
+Todoアプリ必要機能
+
+ページ
+ ・ログイン
+ ・新規登録
+　・マイページ
+    進捗管理
+    達成率
+TODO
+　・作成
+ 	同じページにinput配置（title desc）
+ ・更新
+ 	画面遷移して入力
+ ・削除
+ 	ボタン
+ ・チェックボックス
+ 	チェック範囲削除
+ ・
+-->
+
+ 
+<body>
+    <div class="inputForm">
+		<form th:action="@{/todo/form}" method="post">
+		    <input type="text" name="title" placeholder="タイトル入力">
+
+
+		    <input type="text" name="desc" placeholder="タスクの内容">
+
+
+		    <input type="submit" value="送信">
+		</form>
+</div>
+
+    <table border="2">
+        <tr>
+            <th>タイトル</th>
+            <th>内容</th>
+        </tr>
+        <tr th:each="lists:${select}">
+
+            <td th:text="${lists.name}"></td>
+    
+            <td th:text="${lists.description}"></td>
+        </tr>
+
+    </table>
+	
+    
+</body>

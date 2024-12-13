@@ -1,0 +1,12 @@
+<dataset>
+    <table name="todo">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>        
+        <row>
+            <value>1</value>
+            <value>hoge</value>
+            <value>Junit</value>            
+        </row>
+    </table>
+</dataset>
